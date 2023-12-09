@@ -10,16 +10,15 @@ class NilaiKuliahController extends Controller
 {
 	public function index()
 	{
-    	// mengambil data dari table pegawai
-		// $pegawai = DB::table('pegawai')->get();
+    	// mengambil data dari table nilaikuliah
         $nilaikuliah = DB::table('nilaikuliah')->get();
 
-    	// mengirim data pegawai ke view index
+    	// mengirim data nilaikuliah ke view index
 		return view('indexnilaikuliah',['nilaikuliah' => $nilaikuliah]);
 
 	}
 
-	// method untuk menampilkan view form tambah pegawai
+	// method untuk menampilkan view form tambah nilaikuliah
 	public function tambah()
 	{
 
@@ -28,17 +27,17 @@ class NilaiKuliahController extends Controller
 
 	}
 
-	// method untuk insert data ke table pegawai
+	// method untuk insert data ke table nilaikuliah
 	public function store(Request $request)
 	{
-		// insert data ke table pegawai
+		// insert data ke table nilaikuliah
 		DB::table('nilaikuliah')->insert([
-			'nilaikuliah_ID' => $request->ID,
-			'nilaikuliah_NRP' => $request->NRP,
-			'nilaikuliah_NilaiAngka' => $request->NilaiAngka,
-			'nilaikuliah_SKS' => $request->SKS
+			'ID' => $request->ID,
+			'NRP' => $request->NRP,
+			'NilaiAngka' => $request->NilaiAngka,
+			'SKS' => $request->SKS
 		]);
-		// alihkan halaman ke halaman pegawai
+		// alihkan halaman ke halaman nilaikuliah
 		return redirect('/nilaikuliah');
 
 	}

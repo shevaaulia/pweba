@@ -113,7 +113,7 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 
 //pra_eas
-Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@indexnilaikuliah');
-Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiKuliahController@tambahnilaikuliah');
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
+Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiKuliahController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
 

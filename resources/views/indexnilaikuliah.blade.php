@@ -4,29 +4,43 @@
 
 @section('konten')
 
-    <h1>Nilai Kuliah XX</h1>
+    <h1>Data Nilai Kuliah</h1>
     <h3>Nilai Kuliah Per Mahasiswa</h3>
 
     <a href="/nilaikuliah/tambah" class="btn btn-primary"> + Tambah Nilai </a>
+    <br>
     <br>
 
     <table class="table table-striped table-hover">
         <tr>
             <th>ID</th>
             <th>NRP</th>
-            <th>NilaiAngka</th>
+            <th>Nilai Angka</th>
             <th>SKS</th>
-            <th>Opsi</th>
+            <th>Nilai Huruf</th>
+            <th>Bobot</th>
         </tr>
-        @foreach ($nilaikuliah as $p)
+        @foreach ($nilaikuliah as $n)
             <tr>
-                <td>{{ $p->nilaikuliah_ID }}</td>
-                <td>{{ $p->nilaikuliah_NRP }}</td>
-                <td>{{ $p->nilaikuliah_NilaiAngka}}</td>
-                <td>{{ $p->nilaikuliah_SKS }}</td>
+                <td>{{ $n->ID }}</td>
+                <td>{{ $n->NRP }}</td>
+                <td>{{ $n->NilaiAngka}}</td>
+                <td>{{ $n->SKS }}</td>
+
+                {{-- if statement --}}
+              <td> @if ($n -> NilaiAngka >= 81)
+                    A
+                @elseif ($n -> NilaiAngka >= 61 && $n -> NilaiAngka <= 80 )
+                    B
+                @elseif ($n -> NilaiAngka >= 41 && $n -> NilaiAngka <= 60  )
+                    C
+                @else
+                    D
+                @endif
+              </td>
+              {{-- menghitung bobot nilai --}}
+                <td>{{ $n->NilaiAngka * $n->SKS}}</td>
             </tr>
         @endforeach
     </table>
-
-    {{ $nilaikuliah->links() }}
 @endsection

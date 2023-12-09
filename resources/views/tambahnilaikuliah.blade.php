@@ -13,46 +13,31 @@
     <br />
 
     <div class="container">
-    <form action="/pegawai/store" method="post" class="form-horizontal">
+    <form action="/nilaikuliah/store" method="post" class="form-horizontal">
         {{ csrf_field() }}
         <div class="form-group row">
-            <label for="nama" class="col-xs-3 col-form-label mr-2">Nama</label>
+            <label for="NRP" class="col-xs-3 col-form-label mr-2">NRP</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" id="nama" name="nama">
+                <input type="text" class="form-control" id="NRP" name="NRP">
             </div>
         </div>
         <div class="form-group row">
-            <label for="jabatan" class="col-xs-3 col-form-label mr-2">Jabatan</label>
+            <label for="NilaiAngka" class="col-xs-3 col-form-label mr-2">Nilai Akhir</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" id="nama" name="jabatan">
+                <input type="text" class="form-control" id="NilaiAngka" name="NilaiAngka">
             </div>
         </div>
         <div class="form-group row">
-            <label for="umur" class="col-xs-3 col-form-label mr-2">Umur</label>
+            <label for="SKS" class="col-xs-3 col-form-label mr-2">SKS</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" id="nama" name="umur">
+                <input type="text" class="form-control" id="SKS" name="SKS">
             </div>
         </div>
         <div class="form-group row">
-            <label for="alamat" class="col-xs-3 col-form-label mr-2">Alamat</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="nama" name="alamat">
-            </div>
-        </div>
-        <div class="form-group row">
-        <input type="submit" value="Simpan Data">
+        <input type="submit" value="Tambah Data">
         </div>
     </div>
     </form>
-
-        {{-- Nama <input type="text" name="nama"> <br />
-        Jabatan <input type="text" name="jabatan"> <br />
-        Umur <input type="number" name="umur"> <br />
-        Alamat <textarea name="alamat"></textarea> <br />
-        <input type="submit" value="Simpan Data">
-    </form> --}}
-
-
 
     </body>
 @endsection
