@@ -4,10 +4,10 @@
 
 @section('konten')
 
-    <h1>Database Sepeda</h1>
+    <h1>PWEB-A</h1>
     <h3>Data Sepeda</h3>
 
-    <a href="/sepeda/tambah" class="btn btn-primary"> + Tambah Sepeda</a>
+    <a href="/sepeda/tambah" class="btn btn-primary"> Tambah Sepeda</a>
 
     <br>
     <p>Cari Data Sepeda :</p>
@@ -23,7 +23,7 @@
             <th>Kode</th>
             <th>Merk</th>
             <th>Stock</th>
-            <th>Ketersediaan</th>
+            <th>Tersedia</th>
             <th>Opsi</th>
         </tr>
         @foreach ($sepeda as $s)
@@ -31,13 +31,8 @@
                 <td>{{ $s->kodesepeda }}</td>
                 <td>{{ $s->merksepeda }}</td>
                 <td>{{ $s->stocksepeda }}</td>
-                {{-- <td>
-                    @if ($s->tersedia == 'Y')
-                        YES
-                    @elseif ($s->tersedia == 'N')
-                        NO
-                    @endif
-                </td> --}}
+
+                {{-- if statement --}}
                 <td>
                     @if ($s->stocksepeda <= 0)
                     <input class="form-check-input" type="checkbox" {{ $s->stocksepeda <= 0 ? 'disabled' : '' }} id="flexCheckDefault">

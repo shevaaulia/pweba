@@ -5,7 +5,6 @@
 </head>
 <body>
 
-    <h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
     <h3>Data Sepeda</h3>
 
     <a href="/sepeda"> Kembali</a>

@@ -4,10 +4,10 @@
 
 @section('konten')
 
-    <h1>Data Nilai Kuliah</h1>
-    <h3>Nilai Kuliah Per Mahasiswa</h3>
+    <h1>PWEB-A</h1>
+    <h3>Nilai Kuliah Mahasiswa</h3>
 
-    <a href="/nilaikuliah/tambah" class="btn btn-primary"> + Tambah Nilai </a>
+    <a href="/nilaikuliah/tambah" class="btn btn-primary"> Tambah Nilai Baru </a>
     <br>
     <br>
 
@@ -24,22 +24,24 @@
             <tr>
                 <td>{{ $n->ID }}</td>
                 <td>{{ $n->NRP }}</td>
-                <td>{{ $n->NilaiAngka}}</td>
+                <td>{{ $n->NilaiAngka }}</td>
                 <td>{{ $n->SKS }}</td>
 
                 {{-- if statement --}}
-              <td> @if ($n -> NilaiAngka >= 81)
-                    A
-                @elseif ($n -> NilaiAngka >= 61 && $n -> NilaiAngka <= 80 )
-                    B
-                @elseif ($n -> NilaiAngka >= 41 && $n -> NilaiAngka <= 60  )
-                    C
-                @else
-                    D
-                @endif
-              </td>
-              {{-- menghitung bobot nilai --}}
-                <td>{{ $n->NilaiAngka * $n->SKS}}</td>
+                <td>
+                    @if ($n->NilaiAngka >= 81)
+                        A
+                    @elseif ($n->NilaiAngka >= 61 && $n->NilaiAngka <= 80)
+                        B
+                    @elseif ($n->NilaiAngka >= 41 && $n->NilaiAngka <= 60)
+                        C
+                    @else
+                        D
+                    @endif
+                </td>
+
+                {{-- menghitung bobot nilai --}}
+                <td>{{ $n->NilaiAngka * $n->SKS }}</td>
             </tr>
         @endforeach
     </table>

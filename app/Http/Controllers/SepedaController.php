@@ -28,7 +28,7 @@ class SepedaController extends Controller
 
 	}
 
-	// method untuk insert data ke table pegawai
+	// method untuk insert data ke table sepeda
 	public function store(Request $request)
 	{
 		// insert data ke table pegawai
@@ -52,20 +52,6 @@ class SepedaController extends Controller
 		return view('editsepeda',['sepeda' => $sepeda]);
 
 	}
-
-	// // update data pegawai
-	// public function update(Request $request)
-	// {
-	// 	// update data pegawai
-	// 	DB::table('pegawai')->where('pegawai_id',$request->id)->update([
-	// 		'pegawai_nama' => $request->nama,
-	// 		'pegawai_jabatan' => $request->jabatan,
-	// 		'pegawai_umur' => $request->umur,
-	// 		'pegawai_alamat' => $request->alamat
-	// 	]);
-	// 	// alihkan halaman ke halaman pegawai
-	// 	return redirect('/pegawai');
-	// }
 
 	// method untuk hapus data sepeda
 	public function hapus($id)

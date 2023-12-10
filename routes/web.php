@@ -109,7 +109,6 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
-
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 
 //latihan eas cewe
@@ -119,7 +118,7 @@ Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@sto
 
 //latihan eas cowo
 Route::get('/keranjangbelanja','App\Http\Controllers\BelanjaController@index');
-Route::get('/keranjangbelanja/beli','App\Http\Controllers\BelanjaController@beli');
+Route::get('/keranjangbelanja/tambah','App\Http\Controllers\BelanjaController@tambah');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\BelanjaController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\BelanjaController@hapus');
 

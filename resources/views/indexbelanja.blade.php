@@ -4,9 +4,13 @@
 
 @section('konten')
 
+    <h1>PWEB-A</h1>
     <h3>Keranjang Belanja Anda</h3>
-    <a href="/indexBarang/addbarang" class="btn btn-success">Beli</a>
+
+    <a href="/keranjangbelanja/tambah" class="btn btn-success">Beli Barang</a>
     <br>
+    <br>
+
     <table class="table table-striped table-hover">
         <tr>
             <th>Kode Pembelian</th>
@@ -21,11 +25,11 @@
                 <td>{{ $k->ID }}</td>
                 <td>{{ $k->KodeBarang }}</td>
                 <td>{{ $k->Jumlah }}</td>
-                <td>{{ $k->Harga }}</td>
-                <td>{{ $k->Harga * $k->Jumlah }}</td>
-                <td>
+                <td>{{ number_format($k->Harga, 0, ',', '.') }}</td>
+                <td>{{ number_format($k->Harga * $k->Jumlah, 0, ',', '.') }}</td>
 
-                    <a href="/indexbelanja/hapus/{{ $p->ID }}" class="btn btn-danger">Hapus</a>
+                <td>
+                    <a href="/keranjangbelanja/hapus/{{ $k->ID }}" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
         @endforeach

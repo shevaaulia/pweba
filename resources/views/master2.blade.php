@@ -25,9 +25,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="http://127.0.0.1:8000/nilaikuliah">nilaikuliah</a>
-            </li>
+            </li> --}}
 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
@@ -38,7 +38,8 @@
                     <a class="dropdown-item" href="/pegawai">pegawai</a>
                     <a class="dropdown-item" href="/nilaikuliah">nilaikuliah</a>
                     <a class="dropdown-item" href="/sepeda">sepeda</a>
-                    <a class="dropdown-item" href="#">keranjangbelanja</a>
+                    <a class="dropdown-item" href="/keranjangbelanja">keranjangbelanja</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000">ETS</a>
                     <a class="dropdown-item" href="#">EAS</a>
                 </div>
             </li>
