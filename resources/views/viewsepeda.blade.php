@@ -35,7 +35,7 @@
                         <div class="col-sm-1">:</div>
                         <div class="col-sm-5">{{ $s->tersedia}}</div>
                     </div>
-                    <a href="/pegawai" button type="button" class="btn btn-primary" > 0K </a>
+                    <a href="/sepeda" button type="button" class="btn btn-primary" > 0K </a>
                 @endforeach
             </div>
         </div>

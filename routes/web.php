@@ -112,8 +112,17 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 
-//pra_eas
+//latihan eas cewe
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
 Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiKuliahController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
 
+//tugas pra eas
+Route::get('/sepeda','App\Http\Controllers\SepedaController@index');
+Route::get('/sepeda/tambah','App\Http\Controllers\SepedaController@tambah');
+Route::post('/sepeda/store','App\Http\Controllers\SepedaController@store');
+Route::get('/sepeda/edit/{id}','App\Http\Controllers\SepedaController@edit');
+Route::post('/sepeda/update','App\Http\Controllers\SepedaController@update');
+Route::get('/sepeda/hapus/{id}','App\Http\Controllers\SepedaController@hapus');
+Route::get('/sepeda/view/{id}','App\Http\Controllers\SepedaController@view');
+Route::get('/sepeda/cari','App\Http\Controllers\SepedaController@cari');

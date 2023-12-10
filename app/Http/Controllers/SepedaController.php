@@ -12,7 +12,7 @@ class SepedaController extends Controller
 	{
     	// mengambil data dari table sepeda
 		// $sepeda = DB::table('sepeda)->get();
-         $sepeda = DB::table('sepeda')->paginate(10);
+        $sepeda = DB::table('sepeda')->get();
 
     	// mengirim data sepeda ke view index
 		return view('indexsepeda',['sepeda' => $sepeda]);
@@ -33,7 +33,7 @@ class SepedaController extends Controller
 	{
 		// insert data ke table pegawai
 		DB::table('sepeda')->insert([
-			'kodesepeda' => $request->kode,
+			// 'kodesepeda' => $request->kode,
 			'merksepeda' => $request->merk,
 			'stocksepeda' => $request->stock,
 			'tersedia' => $request->tersedia
@@ -93,13 +93,13 @@ class SepedaController extends Controller
 
 	}
 
-    	// // method untuk view data pegawai
-        // public function view($id)
-        // {
-        //     // mengambil data pegawai berdasarkan id yang dipilih
-        // $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
-        //     // passing data pegawai yang didapat ke view view.blade.php
-        // return view('view', ['pegawai' => $pegawai]);
-        // }
+    	// method untuk view data sepeda
+        public function view($id)
+        {
+            // mengambil data sepeda berdasarkan kode yang dipilih
+        $sepeda = DB::table('sepeda')->where('kodesepeda', $id)->get();
+            // passing data sepeda yang didapat ke view viewsepeda.blade.php
+        return view('viewsepeda', ['sepeda' => $sepeda]);
+        }
 
 }

@@ -4,10 +4,10 @@
 
 @section('konten')
 
-    <h1>Database Kantor</h1>
-    <h3>Data Pegawai</h3>
+    <h1>PWEB-A</h1>
+    <h3>DATABASE PEGAWAI</h3>
 
-    <a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
+    <a href="/pegawai/tambah" class="btn btn-primary"> Tambah Pegawai Baru</a>
 
     <br>
     <p>Cari Data Pegawai :</p>

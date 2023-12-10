@@ -24,19 +24,14 @@
         <br>
         <div class="form-group">
             <label for="st">Stock:</label>
-            <input type="text" required="required" name="st" value="{{ $p->stocksepeda }}" class="form-control" id="st">
+            <input type="text" required="required" name="st" value="{{ $s->stocksepeda }}" class="form-control" id="st">
         </div>
         <br>
         <div class="form-group">
             <label for="tsd">Ketersediaan:</label>
-            <input type="text" required="required" name="tsd" value="{{ $p->tersedia }}" class="form-control" id="tsd">
+            <input type="text" required="required" name="tsd" value="{{ $s->tersedia }}" class="form-control" id="tsd">
         </div>
         <br>
-        {{-- <div class="form-group">
-            <label for="alt">Alamat:</label>
-            <input type="text" required="required" name="nama" value="{{ $p->pegawai_alamat }}" class="form-control" id="alt">
-        </div>
-        <br> --}}
         <input type="submit" value="Simpan Data" >
     </form>
 	@endforeach

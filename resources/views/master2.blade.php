@@ -15,12 +15,15 @@
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">5026221145 Sheva Aulia</a>
+        <a class="navbar-brand" href="#">Sheva Aulia - 5026221145</a>
 
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="http://127.0.0.1:8000">ETS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://127.0.0.1:8000/nilaikuliah">nilaikuliah</a>
@@ -32,9 +35,11 @@
                     DATABASE
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/pegawai">Pegawai</a>
-                    <a class="dropdown-item" href="#">Link 2</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
+                    <a class="dropdown-item" href="/pegawai">pegawai</a>
+                    <a class="dropdown-item" href="/nilaikuliah">nilaikuliah</a>
+                    <a class="dropdown-item" href="/sepeda">sepeda</a>
+                    <a class="dropdown-item" href="#">keranjangbelanja</a>
+                    <a class="dropdown-item" href="#">EAS</a>
                 </div>
             </li>
         </ul>
