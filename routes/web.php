@@ -117,6 +117,12 @@ Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
 Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiKuliahController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
 
+//latihan eas cowo
+Route::get('/keranjangbelanja','App\Http\Controllers\BelanjaController@index');
+Route::get('/keranjangbelanja/beli','App\Http\Controllers\BelanjaController@beli');
+Route::post('/keranjangbelanja/store','App\Http\Controllers\BelanjaController@store');
+Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\BelanjaController@hapus');
+
 //tugas pra eas
 Route::get('/sepeda','App\Http\Controllers\SepedaController@index');
 Route::get('/sepeda/tambah','App\Http\Controllers\SepedaController@tambah');
