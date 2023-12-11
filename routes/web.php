@@ -131,3 +131,10 @@ Route::post('/sepeda/update','App\Http\Controllers\SepedaController@update');
 Route::get('/sepeda/hapus/{id}','App\Http\Controllers\SepedaController@hapus');
 Route::get('/sepeda/view/{id}','App\Http\Controllers\SepedaController@view');
 Route::get('/sepeda/cari','App\Http\Controllers\SepedaController@cari');
+
+//EAS
+Route::get('/mahasiswa','App\Http\Controllers\MahasiswaController@index');
+Route::post('/mahasiswa/store','App\Http\Controllers\MahasiswaController@store');
+Route::get('/mahasiswa/edit/{id}','App\Http\Controllers\MahasiswaController@edit');
+Route::post('/mahasiswa/update','App\Http\Controllers\MahasiswaController@update');
+Route::get('/mahasiswa/view/{id}','App\Http\Controllers\MahasiswaController@view');

@@ -53,6 +53,19 @@ class SepedaController extends Controller
 
 	}
 
+    	// update data sepeda
+	public function update(Request $request)
+	{
+		// update data sepeda
+		DB::table('sepeda')->where('kodesepeda',$request->id)->update([
+			'merksepeda' => $request->merk,
+			'stocksepeda' => $request->stock,
+			'tersedia' => $request->tersedia
+		]);
+		// alihkan halaman ke halaman sepeda
+		return redirect('/sepeda');
+	}
+
 	// method untuk hapus data sepeda
 	public function hapus($id)
 	{
