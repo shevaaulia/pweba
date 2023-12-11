@@ -26,11 +26,8 @@
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Mahasiswa</a>
+                <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/nilaikuliah">nilaikuliah</a>
-            </li> --}}
 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
