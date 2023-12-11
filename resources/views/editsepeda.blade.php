@@ -15,7 +15,7 @@
 	@foreach($sepeda as $s)
 	<form action="/sepeda/update" method="post">
 		{{ csrf_field() }}
-        <input type="hidden" name="kode" value="{{ $s->kodesepeda}}">
+        <input type="hidden" name="id" value="{{ $s->kodesepeda}}">
         <div class="form-group">
             <label for="mk">Merk:</label>
             <input type="text" required="required" name="mk" value="{{ $s->merksepeda }}" class="form-control" id="mk">
